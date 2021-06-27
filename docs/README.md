@@ -66,7 +66,7 @@ npm run dev
 
 > Network: use `--host` to expose
 
-有时调试，我们也需要Network地址，那么我们可以在package.json中的scripts的dev增加参数 `--host` 。
+有时调试，我们也需要使用Network地址，那么我们可以在package.json中的scripts的dev增加参数 `--host` 。
 
 ```json
 {
@@ -80,7 +80,39 @@ npm run dev
 
 ![cmd命令1](./imgs/cmd命令2.jpg)
 
-## 集成xxx
+## 设置alias
+
+在vue2.x开发中，我们已经习惯了使用alias，比如
+
+```javascript
+import Header from '@/components/Header'
+```
+
+在vite.config.ts文件中，我们可以配置
+
+```javascript
+import vue from '@vitejs/plugin-vue'
+import { resolve } from 'path'
+import { defineConfig } from 'vite'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [vue()],
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src') // 设置 `@` 指向 `src` 目录
+    }
+  }
+})
+```
+
+此时发现vscode提示找不到path模块，可以安装 @types/node 解决问题
+
+```sh
+npm install @types/node -D
+```
+
+## 引入
 
 
 
