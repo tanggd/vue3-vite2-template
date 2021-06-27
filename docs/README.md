@@ -14,7 +14,9 @@
 - Axios
 - Stylus、Sass、Less
 
-## 初始化项目
+## 开始搭建
+
+### 初始化项目
 
 项目采用 `Vite` 初始化，需要特别注意Vite 需要 [Node.js](https://nodejs.org/en/) 版本 >= 12.0.0。
 
@@ -80,7 +82,7 @@ npm run dev
 
 ![cmd命令1](./imgs/cmd命令2.jpg)
 
-## 设置alias
+### 设置alias
 
 在vue2.x开发中，我们已经习惯了使用alias，比如
 
@@ -112,7 +114,7 @@ export default defineConfig({
 npm install @types/node -D
 ```
 
-## 引入
+### 引入
 
 
 
