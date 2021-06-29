@@ -108,13 +108,28 @@ export default defineConfig({
 })
 ```
 
-此时发现vscode提示找不到path模块，可以安装 @types/node 解决问题
+此时发现vscode提示找不到path模块，需要安装 @types/node 解决问题
 
 ```sh
 npm install @types/node -D
 ```
 
-### 引入
+### 引入vue-router
+
+Vue3.x 应该安装对应的vue-router4.x版本。
+
+```sh
+npm install vue-router@4
+```
+
+和vue2.x一样，在 `src` 下创建 `router` 目录，然后在 `router` 目录里新建 `index.ts` 文件
+
+## 参考资料
+
+- [Vue3官方文档](https://v3.cn.vuejs.org/)
+- [Vite官方文档](https://cn.vitejs.dev/)
+- [Vue Router 4.x官方文档](https://next.router.vuejs.org/zh/index.html)
+- 
 
 
 
