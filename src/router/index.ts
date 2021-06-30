@@ -13,12 +13,12 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/home',
     name: 'Home',
-    component: () => import('@/views/Home/index.ts')
+    component: () => import('@/views/Home/index.vue')
   },
   {
     path: '/antDesign',
     name: 'Ant Design of Vue',
-    component: () => import('@/views/AntDesign/index')
+    component: () => import('@/views/AntDesign/index.vue')
   }
 ]
 
