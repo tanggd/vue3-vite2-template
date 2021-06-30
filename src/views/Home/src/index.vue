@@ -1,16 +1,19 @@
 <template>
   <div>
-    Home
+    {{ msg }}
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
   name: 'Home',
   setup() {
-    return {}
+    const msg = ref('11111')
+    return {
+      msg
+    }
   }
 })
 </script>
