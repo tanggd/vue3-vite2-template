@@ -1,9 +1,13 @@
 {
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "build2": "vue-tsc --noEmit --skipLibCheck && vite build",
+    "build3": "vite build",
+    "serve": "vite preview",
+    "clean:cache": "rimraf node_modules/.cache/ && rimraf node_modules/.vite",
+    "clean:lib": "rimraf node_modules"
   },
   "dependencies": {
     "ant-design-vue": "^2.2.0-rc.1",
@@ -14,9 +18,10 @@
     "@types/node": "^15.12.5",
     "@vitejs/plugin-vue": "^1.2.3",
     "@vue/compiler-sfc": "^3.0.5",
+    "rimraf": "^3.0.2",
     "typescript": "^4.3.2",
     "vite": "^2.3.8",
     "vite-plugin-style-import": "^1.0.1",
-    "vue-tsc": "^0.0.24"
+    "vue-tsc": "^0.2.0"
   }
 }
