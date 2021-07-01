@@ -18,7 +18,10 @@ export default defineConfig({
         }
       }]
     }),
-    vueJsx({})
+    vueJsx({
+      mergeProps: false,
+      enableObjectSlots: false
+    })
   ],
   resolve: {
     alias: {

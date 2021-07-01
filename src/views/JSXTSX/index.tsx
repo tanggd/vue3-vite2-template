@@ -1,4 +1,4 @@
-<script lang="tsx">
+
 import { defineComponent, ref, withModifiers } from 'vue'
 export default defineComponent({
   name: 'JSXTSX',
@@ -11,7 +11,7 @@ export default defineComponent({
 
     return () => (
       <>
-        <div>jsx tsx2</div>
+        <div>jsx tsx</div>
         <div>{ total.value }</div>
         <a-button type="primary" onClick={add}>按钮</a-button>
         <a-button type="primary" onClick={withModifiers(add, ['self'])}>按钮</a-button>
@@ -19,4 +19,3 @@ export default defineComponent({
     )
   }
 })
-</script>

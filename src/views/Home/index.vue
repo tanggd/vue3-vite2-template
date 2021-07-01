@@ -10,7 +10,7 @@ import { defineComponent, ref } from 'vue'
 export default defineComponent({
   name: 'Home',
   setup() {
-    const msg = ref('home')
+    const msg = ref('home1')
     return {
       msg
     }

@@ -23,7 +23,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/jsxtsx',
     name: 'JSX TSX',
-    component: () => import('@/views/JSXTSX/index.vue')
+    component: () => import('@/views/JSXTSX/index.tsx')
   }
 ]
 
