@@ -24,7 +24,12 @@ const routes: Array<RouteRecordRaw> = [
     path: '/jsxtsx',
     name: 'JSX TSX',
     component: () => import('@/views/JSXTSX/index.tsx')
-  }
+  },
+  {
+    path: '/vuex',
+    name: 'vuex',
+    component: () => import('@/views/vuex/index.vue')
+  },
 ]
 
 const router = createRouter({

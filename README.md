@@ -6,7 +6,7 @@
 - Vite2.x
 - TypeScript4.x
 - Vue Router 4.x
-- Vuex 4.x
+- Vuex 4.x  https://next.vuex.vuejs.org/installation.html#direct-download-cdn
 - Axios
 - Stylus、Sass、Less
 - jsx\tsx的支持  https://github.com/vitejs/vite/tree/main/packages/plugin-vue-jsx

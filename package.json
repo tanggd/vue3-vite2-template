@@ -12,7 +12,8 @@
   "dependencies": {
     "ant-design-vue": "^2.2.0-rc.1",
     "vue": "^3.0.5",
-    "vue-router": "^4.0.10"
+    "vue-router": "^4.0.10",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@types/node": "^15.12.5",
