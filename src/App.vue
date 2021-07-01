@@ -1,7 +1,8 @@
 <template>
   <div>
     <router-link to="/home">home11</router-link> | 
-    <router-link to="/antDesign">Ant Design</router-link>
+    <router-link to="/antDesign">Ant Design</router-link> |
+    <router-link to="/jsxtsx">JSX TSX</router-link>
   </div>
   <router-view></router-view>
 </template>

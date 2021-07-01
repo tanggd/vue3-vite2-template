@@ -9,6 +9,7 @@
 - Vuex 4.x
 - Axios
 - Stylus、Sass、Less
+- jsx\tsx的支持  https://github.com/vitejs/vite/tree/main/packages/plugin-vue-jsx
 
 ## 搭建步骤
 

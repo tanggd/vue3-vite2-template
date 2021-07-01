@@ -1,4 +1,5 @@
 import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import styleImport from 'vite-plugin-style-import'
@@ -16,7 +17,8 @@ export default defineConfig({
           return `ant-design-vue/es/${name}/style/index.css`
         }
       }]
-    })
+    }),
+    vueJsx({})
   ],
   resolve: {
     alias: {

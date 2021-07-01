@@ -19,6 +19,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/antDesign',
     name: 'Ant Design of Vue',
     component: () => import('@/views/AntDesign/index.vue')
+  },
+  {
+    path: '/jsxtsx',
+    name: 'JSX TSX',
+    component: () => import('@/views/JSXTSX/index.vue')
   }
 ]
 
