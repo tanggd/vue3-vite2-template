@@ -19,16 +19,32 @@ export default defineConfig({
         }
       }]
     }),
-    
+
     vueJsx({
       mergeProps: false,
       enableObjectSlots: false
     })
   ],
-  
+
+  build: {
+    rollupOptions: {
+
+    }
+  },
+
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src')
+    }
+  },
+
+  server: {
+    proxy: {
+      '/githubApi': {
+        target: 'https://api.github.com',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/githubApi/, '')
+      },
     }
   }
 })
