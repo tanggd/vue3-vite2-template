@@ -1,5 +1,6 @@
 import axios from 'axios'
 
+console.log(import.meta.env.xx)
 console.log(process.env.NODE_ENV)
 
 const service = axios.create({

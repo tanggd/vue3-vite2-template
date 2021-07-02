@@ -8,6 +8,7 @@ import styleImport from 'vite-plugin-style-import'
 export default defineConfig({
   plugins: [
     vue(),
+
     styleImport({
       libs: [{
         libraryName: 'ant-design-vue',
@@ -18,11 +19,13 @@ export default defineConfig({
         }
       }]
     }),
+    
     vueJsx({
       mergeProps: false,
       enableObjectSlots: false
     })
   ],
+  
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src')

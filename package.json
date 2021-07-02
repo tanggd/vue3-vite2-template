@@ -2,10 +2,13 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --host",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build",
+    "build:dev": "vite build --mode development",
+    "build:pro": "vite build --mode production",
+    "build1": "vue-tsc --noEmit && vite build",
     "build2": "vue-tsc --noEmit --skipLibCheck && vite build",
     "build3": "vite build",
-    "serve": "vite preview",
+    "serve": "vite preview --host",
     "clean:cache": "rimraf node_modules/.cache/ && rimraf node_modules/.vite",
     "clean:lib": "rimraf node_modules"
   },

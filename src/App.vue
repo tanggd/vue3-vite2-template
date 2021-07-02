@@ -13,8 +13,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HelloWorld from '@/components/HelloWorld.vue'
-import { routes } from '@/router'
+import HelloWorld from './components/HelloWorld.vue'
+import { routes } from './router'
 
 export default defineComponent({
   name: 'App',
