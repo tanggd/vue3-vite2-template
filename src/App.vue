@@ -29,8 +29,9 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .router-item {
   margin-right: 10px;
+  color: red;
 }
 </style>
