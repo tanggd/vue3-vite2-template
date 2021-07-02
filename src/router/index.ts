@@ -4,7 +4,7 @@ import {
   RouteRecordRaw
 } from 'vue-router'
 
-const routes: Array<RouteRecordRaw> = [
+export const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Index',
@@ -17,18 +17,23 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/antDesign',
-    name: 'Ant Design of Vue',
+    name: 'AntDesignVue',
     component: () => import('@/views/AntDesign/index.vue')
   },
   {
     path: '/jsxtsx',
-    name: 'JSX TSX',
+    name: 'JSXTSX',
     component: () => import('@/views/JSXTSX/index.tsx')
   },
   {
     path: '/vuex',
     name: 'vuex',
     component: () => import('@/views/vuex/index.vue')
+  },
+  {
+    path: '/axios',
+    name: 'axios',
+    component: () => import('@/views/axios/index.vue')
   },
 ]
 

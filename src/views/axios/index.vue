@@ -1,16 +1,49 @@
 <template>
-  <div>
-    api
-  </div>
+    <InputSearch
+      v-model:value="userName"
+      placeholder="输入github名称"
+      enter-button="Search"
+      @search="onSearch"
+      style="width: 500px"
+    />
+    <pre>{{ userInfo }}</pre>
 </template>
 
-<script>
-import { defineComponent } from 'vue'
+<script lang="ts">
+import { defineComponent, onMounted, ref } from 'vue'
+import { getUserInfo } from './api'
+import { InputSearch } from 'ant-design-vue'
+
 export default defineComponent({
   name: 'axios',
+  components: {
+    InputSearch
+  },
   setup() {
+    const userName = ref('tang')
+    const userInfo = ref({})
+
+    const getUserInfoData = async () => {
+      try {
+        userInfo.value = await getUserInfo(userName.value)
+      } catch (error) {
+        console.error(error)
+      }
+    }
+
+    const onSearch = () => {
+      getUserInfoData()
+    }
+
+    onMounted(() => {
+      getUserInfoData()
+    })
     
-    return {}
+    return {
+      userName,
+      onSearch,
+      userInfo
+    }
   }
 })
 </script>

@@ -1,21 +1,26 @@
 import axios from 'axios'
-import qs from 'qs'
+
+console.log(process.env.NODE_ENV)
 
 const service = axios.create({
   baseURL: '/',
-  timeout: 60 * 1000
+  timeout: 10 * 1000
 })
 
 // 请求拦截器
 service.interceptors.request.use(
   config => {
-    if (
-      config.headers['Content-Type'] === 'application/x-www-form-urlencoded' &&
-      config.data &&
-      Object.prototype.toString.call(config.data) === '[object Object]'
-    ) {
-      config.data = qs.stringify(config.data)
-    }
+    // TODO:
+    // 携带token
+
+
+    // if (
+    //   config.headers['Content-Type'] === 'application/x-www-form-urlencoded' &&
+    //   config.data &&
+    //   Object.prototype.toString.call(config.data) === '[object Object]'
+    // ) {
+    //   config.data = qs.stringify(config.data)
+    // }
 
     return config
   },
@@ -24,26 +29,16 @@ service.interceptors.request.use(
   }
 )
 
-// TODO: 可配置，不使用 返回 公共处理
 // 响应拦截器
-let alerted = false
 service.interceptors.response.use(
   res => {
     if (res.status === 200) {
-      if ((res.config as AxiosRequestConfigAll).getAllResponse) {
-        return res.data
-      }
-      const { code, data, status } = res.data
-      // code === 0 兼容监督指挥那边的接口
-      if (code === 200 || status || code === 0) {
-        return data
-      } else if ([401, 403].includes(code)) {
-        return Promise.reject(data)
-      } else if (code === 500) {
-        return Promise.reject(data)
-      } else {
-        return res
-      }
+      // 注意 普通数据和流数据的区别
+      // 开发自己的code约定逻辑处理
+      // 401: 未登录
+      // 403 token过期
+      // 404请求不存在
+      return res.data
     } else {
       return Promise.reject(res)
     }
@@ -53,3 +48,14 @@ service.interceptors.response.use(
     return Promise.reject(err)
   }
 )
+
+// 请求封装
+export default {
+  get(url: string, params: any, options: any) {
+    return service.get(url, {
+      params,
+      options
+    })
+  },
+  
+}
