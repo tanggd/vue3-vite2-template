@@ -1,3 +1,4 @@
+import Layout from '@/layout'
 import {
   createRouter,
   createWebHashHistory,
@@ -8,7 +9,9 @@ export const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Index',
-    redirect: '/home'
+    component: Layout,
+    children: []
+    // redirect: '/home'
   },
   {
     path: '/home',
@@ -23,7 +26,7 @@ export const routes: Array<RouteRecordRaw> = [
   {
     path: '/jsx-tsx',
     name: 'JSXTSX',
-    component: () => import('@/views/JSXTSX/index.tsx')
+    component: () => import('@/views/JSXTSX')
   },
   {
     path: '/vuex',
@@ -38,7 +41,7 @@ export const routes: Array<RouteRecordRaw> = [
   {
     path: '/image',
     name: 'Image',
-    component: () => import('@/views/Image/index')
+    component: () => import('@/views/Image')
   },
   {
     path: '/css-module',

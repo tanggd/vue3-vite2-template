@@ -1,0 +1,27 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #app, .ant-layout {
+  width: 100%;
+  height: 100%;
+}
+
+.ant-layout {
+  .ant-layout-header {
+    color: #fff;
+    background: #7dbcea;
+  }
+  .ant-layout-sider {
+    color: #fff;
+    line-height: 120px;
+    background: #3ba0e9;
+  }
+  .ant-layout-content {
+    min-height: 120px;
+    color: #fff;
+    line-height: 120px;
+    background: rgba(16, 142, 233, 1);
+  }
+}
