@@ -5,6 +5,7 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "build:pro": "vite build --mode production",
+    "build:test": "vite build --mode test",
     "build1": "vue-tsc --noEmit && vite build",
     "build2": "vue-tsc --noEmit --skipLibCheck && vite build",
     "build3": "vite build",

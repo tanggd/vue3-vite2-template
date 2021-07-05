@@ -1,1 +1,0 @@
-import{d as a,r as e,o as r,c as s,t as o}from"./vendor.53ba71ca.js";var m=a({name:"Home",setup:()=>({msg:e("home1")})});m.render=function(a,e,m,n,t,d){return r(),s("div",null,o(a.msg),1)};export default m;
