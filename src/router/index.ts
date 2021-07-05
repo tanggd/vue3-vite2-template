@@ -16,24 +16,24 @@ export const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/Home/index.vue')
   },
   {
-    path: '/antDesign',
+    path: '/ant-design',
     name: 'AntDesignVue',
     component: () => import('@/views/AntDesign/index.vue')
   },
   {
-    path: '/jsxtsx',
+    path: '/jsx-tsx',
     name: 'JSXTSX',
     component: () => import('@/views/JSXTSX/index.tsx')
   },
   {
     path: '/vuex',
-    name: 'vuex',
-    component: () => import('@/views/vuex/index.vue')
+    name: 'Vuex',
+    component: () => import('@/views/Vuex/index.vue')
   },
   {
     path: '/axios',
-    name: 'axios',
-    component: () => import('@/views/axios/index.vue')
+    name: 'Axios',
+    component: () => import('@/views/Axios/index.vue')
   },
 ]
 

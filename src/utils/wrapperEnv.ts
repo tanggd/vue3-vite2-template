@@ -10,7 +10,6 @@ export function wrapperEnv(envConf: Recordable): ViteEnv {
       realName = Number(realName);
     }
     ret[envName] = realName;
-    process.env[envName] = realName;
   }
   return ret;
 }
