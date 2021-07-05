@@ -35,6 +35,16 @@ export const routes: Array<RouteRecordRaw> = [
     name: 'Axios',
     component: () => import('@/views/Axios/index.vue')
   },
+  {
+    path: '/image',
+    name: 'Image',
+    component: () => import('@/views/Image/index')
+  },
+  {
+    path: '/css-module',
+    name: 'CssModule',
+    component: () => import('@/views/CssModule/index')
+  },
 ]
 
 const router = createRouter({

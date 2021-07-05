@@ -64,7 +64,8 @@ export default ({ command, mode }) => {
       alias: {
         '@': resolve(__dirname, 'src'),
         '#': resolve(__dirname, 'types')
-      }
+      },
+      extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
     },
   
     server: {
