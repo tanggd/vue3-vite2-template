@@ -1,0 +1,14 @@
+.red {
+  color: red;
+}
+
+.main {
+  .red {
+    color: red;
+    opacity: 0.5;
+  }
+  
+  .pink {
+    color: pink;
+  }
+}
