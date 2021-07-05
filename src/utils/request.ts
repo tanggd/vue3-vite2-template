@@ -1,11 +1,14 @@
+import { wrapperEnv } from '@/utils/wrapperEnv'
 import axios from 'axios'
 
-console.log(import.meta.env.xx)
-console.log(process.env.NODE_ENV)
+// console.log(import.meta.env.VITE_APP_AXIOS_TIMEOUT)
+// console.log(process.env.NODE_ENV)
+
+const env = wrapperEnv(import.meta.env)
 
 const service = axios.create({
   baseURL: '/',
-  timeout: 10 * 1000
+  timeout: env.VITE_APP_AXIOS_TIMEOUT || 10 * 1000
 })
 
 // 请求拦截器
