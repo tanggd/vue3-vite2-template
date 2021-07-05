@@ -3,7 +3,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import { resolve } from 'path'
 import { defineConfig, loadEnv } from 'vite'
 import styleImport from 'vite-plugin-style-import'
-import { wrapperEnv } from './src/utils/wrapperEnv'
+import { wrapperEnv } from './src/utils/env'
 
 // https://vitejs.dev/config/
 export default ({ command, mode }) => {

@@ -1,4 +1,4 @@
-import { wrapperEnv } from '@/utils/wrapperEnv'
+import { wrapperEnv } from '@/utils/env'
 import axios from 'axios'
 
 // console.log(import.meta.env.VITE_APP_AXIOS_TIMEOUT)
