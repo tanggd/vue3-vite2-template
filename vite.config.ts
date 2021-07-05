@@ -55,6 +55,10 @@ export default ({ command, mode }) => {
       // chunk 大小警告的限制
       chunkSizeWarningLimit: 2000,
     },
+
+    define: {
+      'process.env': {}
+    },
   
     resolve: {
       alias: {

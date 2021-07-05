@@ -6,6 +6,9 @@ import axios from 'axios'
 
 const env = wrapperEnv(import.meta.env)
 
+
+console.log(process.env)
+
 const service = axios.create({
   baseURL: '/',
   timeout: env.VITE_APP_AXIOS_TIMEOUT || 10 * 1000

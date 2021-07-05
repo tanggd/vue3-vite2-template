@@ -1,15 +1,20 @@
-// Read all environment variable configuration files to process.env
 export function wrapperEnv(envConf: Recordable): ViteEnv {
-  const ret: any = {};
+  const ret: any = {}
 
-  for (const envName of Object.keys(envConf)) {
-    let realName = envConf[envName].replace(/\\n/g, '\n');
-    realName = realName === 'true' ? true : realName === 'false' ? false : realName;
-
-    if (envName === 'VITE_APP_AXIOS_TIMEOUT') {
-      realName = Number(realName);
+  for (const envKey of Object.keys(envConf)) {
+    let realVal = envConf[envKey]
+    if(typeof realVal === 'string') {
+      realVal = realVal.replace(/\\n/g, '\n')
+      // 处理为布尔值
+      realVal = realVal === 'true' ? true : realVal === 'false' ? false : realVal
+      // 处理为数字
+      if (envKey === 'VITE_APP_AXIOS_TIMEOUT') {
+        realVal = Number(realVal)
+      }
     }
-    ret[envName] = realName;
+    ret[envKey] = realVal
+    process.env[envKey] = realVal
   }
-  return ret;
+
+  return ret
 }
