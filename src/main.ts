@@ -8,11 +8,10 @@ import { registerGlobComp } from './utils/registerGlobComp'
 // console.log(import.meta.env.VITE_APP_TITLE)
 
 const app = createApp(App)
+
 registerGlobComp(app)
 
-app.use(router)
-app.use(store)
-
-app.mount('#app')
-
-
+app
+  .use(router)
+  .use(store)
+  .mount('#app')

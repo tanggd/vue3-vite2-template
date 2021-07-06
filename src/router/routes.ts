@@ -18,40 +18,41 @@ const routes: Array<ExtendRouteRecordRaw> = [
     name: 'demo',
     icon: UserOutlined,
     component: Layout,
+    redirect: '/demo/home',
     children: [
       {
-        path: '',
+        path: '/demo/home',
         name: 'Home',
         icon: UserOutlined,
         component: () => import('@/views/Home/index.vue')
       },
       {
-        path: 'ant-design',
+        path: '/demo/ant-design',
         name: 'AntDesignVue',
         component: () => import('@/views/AntDesign/index.vue')
       },
       {
-        path: 'jsx-tsx',
+        path: '/demo/jsx-tsx',
         name: 'JSXTSX',
         component: () => import('@/views/JSXTSX')
       },
       {
-        path: 'vuex',
+        path: '/demo/vuex',
         name: 'Vuex',
         component: () => import('@/views/Vuex/index.vue')
       },
       {
-        path: 'axios',
+        path: '/demo/axios',
         name: 'Axios',
         component: () => import('@/views/Axios/index.vue')
       },
       {
-        path: 'image',
+        path: '/demo/image',
         name: 'Image',
         component: () => import('@/views/Image')
       },
       {
-        path: 'css-module',
+        path: '/demo/css-module',
         name: 'CssModule',
         component: () => import('@/views/CssModule')
       },
