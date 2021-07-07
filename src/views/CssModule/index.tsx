@@ -1,6 +1,6 @@
-import { defineComponent } from 'vue';
-import styles from './index.module.css';
-import stylesScss from './index.module.scss';
+import { defineComponent } from 'vue'
+import styles from './index.module.css'
+import stylesScss from './index.module.scss'
 
 export default defineComponent({
   name: 'CssModule',
@@ -19,6 +19,6 @@ export default defineComponent({
           <div class="red">CssModule3</div>
         </div>
       </>
-    );
+    )
   },
-});
+})

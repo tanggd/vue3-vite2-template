@@ -1,28 +1,28 @@
-import routes from '@/router/routes';
-import { Menu, MenuItem, SubMenu } from 'ant-design-vue';
-import { defineComponent, ref } from 'vue';
-import { useRouter } from 'vue-router';
+import routes from '@/router/routes'
+import { Menu, MenuItem, SubMenu } from 'ant-design-vue'
+import { defineComponent, ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 export default defineComponent({
   name: 'Sidebar',
   setup() {
-    const router = useRouter();
+    const router = useRouter()
 
-    const selectedKeys2 = ref<string[]>(['1']);
-    const openKeys = ref<string[]>(['/demo']);
+    const selectedKeys2 = ref<string[]>(['1'])
+    const openKeys = ref<string[]>(['/demo'])
 
     const onMenuClick = (item) => {
-      console.log(item);
+      console.log(item)
       router.push({
         path: item.key,
-      });
-    };
+      })
+    }
 
     return () => {
       const menuStyle = {
         height: '100%',
         borderRight: 0,
-      };
+      }
 
       const getSlots = (title: any, Icon?: any) => {
         return {
@@ -32,8 +32,8 @@ export default defineComponent({
               <span>{title}</span>
             </div>
           ),
-        };
-      };
+        }
+      }
 
       return (
         <Menu
@@ -54,7 +54,7 @@ export default defineComponent({
             </SubMenu>
           ))}
         </Menu>
-      );
-    };
+      )
+    }
   },
-});
+})

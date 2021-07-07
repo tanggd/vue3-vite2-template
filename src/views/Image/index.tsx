@@ -1,5 +1,5 @@
-import Logo from '@/assets/logo.png';
-import { defineComponent } from 'vue';
+import Logo from '@/assets/logo.png'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'Image',
@@ -8,6 +8,6 @@ export default defineComponent({
       <>
         <img src={Logo} alt="" />
       </>
-    );
+    )
   },
-});
+})

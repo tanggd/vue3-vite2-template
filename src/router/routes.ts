@@ -1,10 +1,10 @@
-import Layout from '@/layout';
+import Layout from '@/layout'
 import {
   // LaptopOutlined,
   // NotificationOutlined,
   UserOutlined,
-} from '@ant-design/icons-vue';
-import { RouteRecordRaw } from 'vue-router';
+} from '@ant-design/icons-vue'
+import { RouteRecordRaw } from 'vue-router'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -56,6 +56,6 @@ const routes: Array<RouteRecordRaw> = [
       },
     ],
   },
-];
+]
 
-export default routes;
+export default routes

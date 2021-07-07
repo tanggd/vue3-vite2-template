@@ -1,5 +1,5 @@
 interface IState {
-  count: number;
+  count: number
 }
 
 const testModule = {
@@ -7,7 +7,7 @@ const testModule = {
   state(): IState {
     return {
       count: 2,
-    };
+    }
   },
   getters: {
     count: (state: IState) => state.count,
@@ -15,21 +15,21 @@ const testModule = {
   },
   mutations: {
     SET_COUNT(state: IState, payload: number) {
-      state.count = payload;
+      state.count = payload
     },
   },
   actions: {
     FETCH_COUNT(context) {
       return new Promise((resolve) => {
         setTimeout(() => {
-          const v = +new Date();
-          context.commit('SET_COUNT', v);
-          resolve(v);
-        }, 1000 * 3);
-      });
+          const v = +new Date()
+          context.commit('SET_COUNT', v)
+          resolve(v)
+        }, 1000 * 3)
+      })
     },
   },
   modules: {},
-};
+}
 
-export default testModule;
+export default testModule

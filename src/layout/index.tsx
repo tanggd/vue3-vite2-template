@@ -1,6 +1,6 @@
-import { Layout, LayoutContent, LayoutHeader, LayoutSider } from 'ant-design-vue';
-import { defineComponent } from 'vue';
-import Sidebar from './Sidebar';
+import { Layout, LayoutContent, LayoutHeader, LayoutSider } from 'ant-design-vue'
+import { defineComponent } from 'vue'
+import Sidebar from './Sidebar'
 
 export default defineComponent({
   name: 'Layout',
@@ -17,6 +17,6 @@ export default defineComponent({
           </LayoutContent>
         </Layout>
       </Layout>
-    );
+    )
   },
-});
+})

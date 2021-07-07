@@ -1,17 +1,17 @@
-import { wrapperEnv } from '@/utils/env';
-import axios from 'axios';
+import { wrapperEnv } from '@/utils/env'
+import axios from 'axios'
 
 // console.log(import.meta.env.VITE_APP_AXIOS_TIMEOUT)
 // console.log(process.env.NODE_ENV)
 
-const env = wrapperEnv(import.meta.env);
+const env = wrapperEnv(import.meta.env)
 
-console.log(process.env);
+console.log(process.env)
 
 const service = axios.create({
   baseURL: '/',
   timeout: env.VITE_APP_AXIOS_TIMEOUT || 10 * 1000,
-});
+})
 
 // 请求拦截器
 service.interceptors.request.use(
@@ -27,12 +27,12 @@ service.interceptors.request.use(
     //   config.data = qs.stringify(config.data)
     // }
 
-    return config;
+    return config
   },
   (err) => {
-    return Promise.reject(err);
+    return Promise.reject(err)
   }
-);
+)
 
 // 响应拦截器
 service.interceptors.response.use(
@@ -43,16 +43,16 @@ service.interceptors.response.use(
       // 401: 未登录
       // 403 token过期
       // 404请求不存在
-      return res.data;
+      return res.data
     } else {
-      return Promise.reject(res);
+      return Promise.reject(res)
     }
   },
   (err) => {
-    console.log('网络异常');
-    return Promise.reject(err);
+    console.log('网络异常')
+    return Promise.reject(err)
   }
-);
+)
 
 // 请求封装
 export default {
@@ -60,6 +60,6 @@ export default {
     return service.get(url, {
       params,
       options,
-    });
+    })
   },
-};
+}

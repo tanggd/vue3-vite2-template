@@ -10,9 +10,9 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent, onMounted, ref } from 'vue';
-  import { getUserInfo } from './api';
-  import { InputSearch } from 'ant-design-vue';
+  import { defineComponent, onMounted, ref } from 'vue'
+  import { getUserInfo } from './api'
+  import { InputSearch } from 'ant-design-vue'
 
   export default defineComponent({
     name: 'Axios',
@@ -20,30 +20,30 @@
       InputSearch,
     },
     setup() {
-      const userName = ref('tang');
-      const userInfo = ref({});
+      const userName = ref('tang')
+      const userInfo = ref({})
 
       const getUserInfoData = async () => {
         try {
-          userInfo.value = await getUserInfo(userName.value);
+          userInfo.value = await getUserInfo(userName.value)
         } catch (error) {
-          console.error(error);
+          console.error(error)
         }
-      };
+      }
 
       const onSearch = () => {
-        getUserInfoData();
-      };
+        getUserInfoData()
+      }
 
       onMounted(() => {
-        getUserInfoData();
-      });
+        getUserInfoData()
+      })
 
       return {
         userName,
         onSearch,
         userInfo,
-      };
+      }
     },
-  });
+  })
 </script>
