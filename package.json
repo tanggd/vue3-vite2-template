@@ -23,16 +23,28 @@
   "devDependencies": {
     "@types/node": "^15.12.5",
     "@types/qs": "^6.9.6",
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
     "@vitejs/plugin-vue": "^1.2.3",
     "@vitejs/plugin-vue-jsx": "^1.1.6",
     "@vue/compiler-sfc": "^3.0.5",
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-define-config": "^1.0.9",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.13.0",
+    "jest": "^27.0.6",
     "less": "^4.1.1",
+    "prettier": "^2.3.2",
     "qs": "^6.10.1",
     "rimraf": "^3.0.2",
     "sass": "^1.35.1",
+    "ts-jest": "^27.0.3",
     "typescript": "^4.3.2",
     "vite": "^2.3.8",
     "vite-plugin-style-import": "^1.0.1",
+    "vue-eslint-parser": "^7.8.0",
     "vue-tsc": "^0.2.0"
   }
 }
