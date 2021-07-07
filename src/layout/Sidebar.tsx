@@ -49,7 +49,7 @@ export default defineComponent({
       >
         {
           routes.map(item =>
-            <SubMenu key={item.path} v-slots={getSlots(item.name, item.icon)}>
+            <SubMenu key={item.path} v-slots={getSlots(item.name, item.meta?.icon)}>
               {
                 item.children?.map(child => <MenuItem key={child.path}>{child.name}</MenuItem>)
               }

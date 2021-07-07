@@ -6,25 +6,23 @@ import {
 } from '@ant-design/icons-vue'
 import { RouteRecordRaw } from 'vue-router'
 
-type ExtendRouteRecordRaw = RouteRecordRaw & { 
-  zname?: string
-  icon?: any,
-  children?: Array<ExtendRouteRecordRaw>
-}
-
-const routes: Array<ExtendRouteRecordRaw> = [
+const routes: Array<RouteRecordRaw> = [
   {
     path: '/demo',
     name: 'demo',
-    icon: UserOutlined,
     component: Layout,
     redirect: '/demo/home',
+    meta: {
+      icon: UserOutlined,
+    },
     children: [
       {
         path: '/demo/home',
         name: 'Home',
-        icon: UserOutlined,
-        component: () => import('@/views/Home/index.vue')
+        component: () => import('@/views/Home/index.vue'),
+        meta: {
+          icon: UserOutlined,
+        },
       },
       {
         path: '/demo/ant-design',

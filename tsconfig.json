@@ -9,7 +9,7 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
-    "typeRoots": ["./node_modules/@types/"],
+    "typeRoots": ["./node_modules/@types/", "./src/types"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
@@ -21,5 +21,6 @@
     "src/**/*.d.ts", 
     "src/**/*.tsx", 
     "src/**/*.vue",
-  ]
+  ],
+  "exclude": ["node_modules", "dist", "**/*.js"]
 }
