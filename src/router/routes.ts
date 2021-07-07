@@ -1,10 +1,10 @@
-import Layout from '@/layout'
+import Layout from '@/layout';
 import {
   // LaptopOutlined,
   // NotificationOutlined,
-  UserOutlined
-} from '@ant-design/icons-vue'
-import { RouteRecordRaw } from 'vue-router'
+  UserOutlined,
+} from '@ant-design/icons-vue';
+import { RouteRecordRaw } from 'vue-router';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -27,35 +27,35 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/demo/ant-design',
         name: 'AntDesignVue',
-        component: () => import('@/views/AntDesign/index.vue')
+        component: () => import('@/views/AntDesign/index.vue'),
       },
       {
         path: '/demo/jsx-tsx',
         name: 'JSXTSX',
-        component: () => import('@/views/JSXTSX')
+        component: () => import('@/views/JSXTSX'),
       },
       {
         path: '/demo/vuex',
         name: 'Vuex',
-        component: () => import('@/views/Vuex/index.vue')
+        component: () => import('@/views/Vuex/index.vue'),
       },
       {
         path: '/demo/axios',
         name: 'Axios',
-        component: () => import('@/views/Axios/index.vue')
+        component: () => import('@/views/Axios/index.vue'),
       },
       {
         path: '/demo/image',
         name: 'Image',
-        component: () => import('@/views/Image')
+        component: () => import('@/views/Image'),
       },
       {
         path: '/demo/css-module',
         name: 'CssModule',
-        component: () => import('@/views/CssModule')
+        component: () => import('@/views/CssModule'),
       },
-    ]
+    ],
   },
-]
+];
 
-export default routes
+export default routes;

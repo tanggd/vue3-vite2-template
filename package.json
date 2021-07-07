@@ -10,6 +10,8 @@
     "build2": "vue-tsc --noEmit --skipLibCheck && vite build",
     "build3": "vite build",
     "serve": "vite preview --host",
+    "lint:eslint": "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,tsx}\" --fix",
+    "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
     "clean:cache": "rimraf node_modules/.cache/ && rimraf node_modules/.vite",
     "clean:lib": "rimraf node_modules"
   },
