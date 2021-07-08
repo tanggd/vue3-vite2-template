@@ -1,5 +1,5 @@
 import { wrapperEnv } from '@/utils/env'
-import axios from 'axios'
+import axios, { AxiosRequestConfig } from 'axios'
 
 // console.log(import.meta.env.VITE_APP_AXIOS_TIMEOUT)
 // console.log(process.env.NODE_ENV)
@@ -60,6 +60,6 @@ export default {
     return service.get(url, {
       params,
       options,
-    })
+    } as AxiosRequestConfig)
   },
 }

@@ -10,6 +10,7 @@
     "build2": "vue-tsc --noEmit --skipLibCheck && vite build",
     "build3": "vite build",
     "serve": "vite preview --host",
+    "type:check": "vue-tsc --noEmit --skipLibCheck",
     "lint:eslint": "eslint --cache --max-warnings 0  \"{src,mock}/**/*.{vue,ts,tsx}\" --fix",
     "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
     "lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",

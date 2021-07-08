@@ -1,7 +1,13 @@
 import { createStore } from 'vuex'
 import testModule from './modules/test'
 
-const store = createStore({})
+const store = createStore({
+  state() {},
+  getters: {},
+  mutations: {},
+  actions: {},
+  modules: {},
+})
 
 // 注册模块
 store.registerModule('testModule', testModule)

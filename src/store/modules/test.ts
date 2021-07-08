@@ -1,20 +1,22 @@
-interface IState {
+import { Module } from 'vuex'
+
+export interface TestState {
   count: number
 }
 
-const testModule = {
+const testModule: Module<TestState, void> = {
   // namespaced: true,
-  state(): IState {
+  state() {
     return {
       count: 2,
     }
   },
   getters: {
-    count: (state: IState) => state.count,
-    count2: (state: IState, getters) => getters.count * 2,
+    count: (state) => state.count,
+    count2: (state, getters) => getters.count * 2,
   },
   mutations: {
-    SET_COUNT(state: IState, payload: number) {
+    SET_COUNT(state, payload) {
       state.count = payload
     },
   },

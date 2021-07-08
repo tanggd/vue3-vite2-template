@@ -11,7 +11,7 @@ export default defineComponent({
     const selectedKeys2 = ref<string[]>(['1'])
     const openKeys = ref<string[]>(['/demo'])
 
-    const onMenuClick = (item) => {
+    const onMenuClick = (item: any) => {
       console.log(item)
       router.push({
         path: item.key,
