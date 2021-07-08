@@ -27,6 +27,8 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@types/node": "^15.12.5",
     "@types/qs": "^6.9.6",
     "@typescript-eslint/eslint-plugin": "^4.28.2",
@@ -34,6 +36,7 @@
     "@vitejs/plugin-vue": "^1.2.3",
     "@vitejs/plugin-vue-jsx": "^1.1.6",
     "@vue/compiler-sfc": "^3.0.5",
+    "commitizen": "^4.2.4",
     "eslint": "^7.30.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-define-config": "^1.0.9",

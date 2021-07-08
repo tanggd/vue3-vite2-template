@@ -47,12 +47,3 @@
     },
   })
 </script>
-
-<style lang="scss">
-  .xxx {
-    color: red;
-    .aaa: {
-      font-size: 14px;
-    }
-  }
-</style>
