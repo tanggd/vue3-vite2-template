@@ -19,7 +19,7 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/demo/home',
         name: 'Home',
-        component: () => import('@/views/Home/index.vue'),
+        component: () => import('@/views/Home'),
         meta: {
           icon: UserOutlined,
         },
@@ -27,7 +27,7 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/demo/ant-design',
         name: 'AntDesignVue',
-        component: () => import('@/views/AntDesign/index.vue'),
+        component: () => import('@/views/AntDesign'),
       },
       {
         path: '/demo/jsx-tsx',
@@ -37,12 +37,12 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: '/demo/vuex',
         name: 'Vuex',
-        component: () => import('@/views/Vuex/index.vue'),
+        component: () => import('@/views/Vuex'),
       },
       {
         path: '/demo/axios',
         name: 'Axios',
-        component: () => import('@/views/Axios/index.vue'),
+        component: () => import('@/views/Axios'),
       },
       {
         path: '/demo/image',
