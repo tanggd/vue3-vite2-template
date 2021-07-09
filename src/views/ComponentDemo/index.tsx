@@ -6,7 +6,7 @@ export default defineComponent({
   setup() {
     const btns = ['JS', 'Java', 'Vue3']
     const msg = ref('')
-    const changeMsg = (text) => {
+    const changeMsg = (text: string) => {
       msg.value = text
     }
 
