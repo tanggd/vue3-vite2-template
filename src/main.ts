@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import store from './store'
+import store, { key } from './store'
 import './styles'
 import { registerGlobComp } from './utils/registerGlobComp'
 
@@ -11,4 +11,4 @@ const app = createApp(App)
 
 registerGlobComp(app)
 
-app.use(router).use(store).mount('#app')
+app.use(router).use(store, key).mount('#app')

@@ -10,14 +10,12 @@
 
 <script>
   import { defineComponent, computed } from 'vue'
-  import { useStore } from 'vuex'
+  import { useStore } from '@/store'
 
   export default defineComponent({
     name: 'Vuex',
     setup() {
       const store = useStore()
-
-      console.log(store)
 
       const count = computed(() => store.getters['count'])
       const count2 = computed(() => store.getters['count2'])

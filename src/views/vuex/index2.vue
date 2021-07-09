@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
   import { defineComponent, computed } from 'vue'
   import { useStore } from 'vuex'
 
@@ -21,6 +21,8 @@
 
       const count = computed(() => store.getters['testModule/count'])
       const count2 = computed(() => store.getters['testModule/count2'])
+
+      // store.getters.
 
       return {
         count,
