@@ -54,6 +54,11 @@ const routes: Array<RouteRecordRaw> = [
         name: 'CssModule',
         component: () => import('@/views/CssModule'),
       },
+      {
+        path: '/demo/component-demo',
+        name: 'ComponentDemo',
+        component: () => import('@/views/ComponentDemo'),
+      },
     ],
   },
 ]
