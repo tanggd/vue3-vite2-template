@@ -1,4 +1,4 @@
-import DemoComponent from '@/components/DemoComponent'
+// import DemoComponent from '@/components/DemoComponent'
 import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
@@ -26,7 +26,8 @@ export default defineComponent({
             ))}
           </a-space>
 
-          <DemoComponent id={123} msg={msg.value} />
+          {/* <DemoComponent id={123} msg={msg.value} /> */}
+          <demo-component id={123} msg={msg.value} />
         </div>
       )
     }

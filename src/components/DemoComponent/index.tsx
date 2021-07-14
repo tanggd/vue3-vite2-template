@@ -1,8 +1,9 @@
+import { withInstall } from '@/utils/component'
 import { computed, defineComponent, PropType } from 'vue'
 import VueTypes, { number } from 'vue-types'
 import styles from './style/index.module.scss'
 
-interface O {
+interface Info {
   name: string
   age: number
 }
@@ -12,9 +13,9 @@ const demoComponentProps = {
   name: VueTypes.string.def('组件示例'),
   msg: VueTypes.oneOf(['JS', 'Java', 'Vue3']).def('JS'),
   id: number(),
-  o: {
+  info: {
     // 如果字段较少的话，直接写在PropType<>里，便于提示;多就interface
-    type: Object as PropType<O>,
+    type: Object as PropType<Info>,
     default: () => ({}),
   },
 }
@@ -46,4 +47,4 @@ const DemoComponent = defineComponent({
   },
 })
 
-export default DemoComponent
+export default withInstall(DemoComponent)
