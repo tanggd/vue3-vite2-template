@@ -1,12 +1,22 @@
-import { computed, defineComponent } from 'vue'
-import VueTypes from 'vue-types'
+import { computed, defineComponent, PropType } from 'vue'
+import VueTypes, { number } from 'vue-types'
 import styles from './style/index.module.scss'
+
+interface O {
+  name: string
+  age: number
+}
 
 const demoComponentProps = {
   // TODO：更改值，或新增加属性，页面热更新并未更新该值的问题
   name: VueTypes.string.def('组件示例'),
-  msg: VueTypes.string,
-  id: VueTypes.number.isRequired,
+  msg: VueTypes.oneOf(['JS', 'Java', 'Vue3']).def('JS'),
+  id: number(),
+  o: {
+    // 如果字段较少的话，直接写在PropType<>里，便于提示;多就interface
+    type: Object as PropType<O>,
+    default: () => ({}),
+  },
 }
 
 const DemoComponent = defineComponent({
