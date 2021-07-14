@@ -1,4 +1,5 @@
 import { withInstall } from '@/utils/component'
+import type { ExtractPropTypes } from 'vue'
 import { computed, defineComponent, PropType } from 'vue'
 import VueTypes, { number } from 'vue-types'
 import styles from './style/index.module.scss'
@@ -46,5 +47,7 @@ const DemoComponent = defineComponent({
     }
   },
 })
+
+export type DemoComponentProps = Partial<ExtractPropTypes<typeof demoComponentProps>>
 
 export default withInstall(DemoComponent)
