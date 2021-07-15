@@ -26,7 +26,14 @@ export default defineComponent({
             ))}
           </a-space>
 
-          <DemoComponent name="局部引入组件" id={123} msg={msg.value} />
+          <DemoComponent
+            name="局部引入组件"
+            id={123}
+            msg={msg.value}
+            onChange={(v) => {
+              console.log(v)
+            }}
+          />
 
           <demo-component name="全局组件" id={1231} msg={msg.value} />
         </div>

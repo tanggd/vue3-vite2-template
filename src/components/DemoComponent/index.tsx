@@ -24,8 +24,13 @@ const demoComponentProps = {
 const DemoComponent = defineComponent({
   name: 'DemoComponent',
   props: demoComponentProps,
-  setup(props) {
+  emits: ['change'],
+  setup(props, { emit }) {
     const msg = computed(() => `Hello ${props.msg}`)
+
+    const btnClick = () => {
+      emit('change', 1)
+    }
 
     return () => {
       return (
@@ -42,6 +47,9 @@ const DemoComponent = defineComponent({
             <span>id：</span>
             <span>{props.id}</span>
           </div>
+          <a-button type="primary" onClick={btnClick}>
+            点击一下
+          </a-button>
         </div>
       )
     }
