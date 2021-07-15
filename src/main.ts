@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App'
-import DemoComponent from './components/DemoComponent'
+import { install as installGlobComp } from './components'
 import router from './router'
 import store, { key } from './store'
 import './styles'
@@ -10,8 +10,9 @@ import { registerGlobComp } from './utils/registerGlobComp'
 
 const app = createApp(App)
 
-app.use(DemoComponent)
-
+// antd组件全局注册
 registerGlobComp(app)
+// 本地全局组件注册
+installGlobComp(app)
 
 app.use(router).use(store, key).mount('#app')
